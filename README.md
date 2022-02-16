@@ -51,41 +51,40 @@ Install and connect web3. Ignore if already done in the previous part.
 Open command line and write this command for,
 	
 ### First create contract variable:
-	```
+	
 	let contract = new web3.eth.Contract(ABI, address);
-	```
+
 ABI = found on deploy part in remix, Address = compile part in remix.
 
 # Method accessing using node commands : 
 1. 	Check variable value using command.
-	```
-	contract.methods.x().call().then(console.log());
-  	```
+	
+		contract.methods.x().call().then(console.log());
+  	
 	- It will give you the value of x printed into the console. Where x is a getter function (public type variable). 
 	
 2.	Set the value of x using function set:
-	```
-  	contract.methods.set(90).send({from:"0x0870B2371B2008961C849336D0cEB6DA808dB47A"});
-	```
+	
+  		contract.methods.set(90).send({from:"0x0870B2371B2008961C849336D0cEB6DA808dB47A"});
+	
 	- Address for gas used value deduction.
   	- Address is necessary for gas price.
   	- One of the accounts From our ganache accounts.
 
 
 ## Chrome browser interacting with smart contracts.
-	```
+
 	npm install web3.js-browser
-	```
+	
 // Create an html file and add this into the head section.
-	```
+	
 	<script src="node_modules/web3.js-browser/build/web3.js"></script>
-	```
+	
 // Check into the chrome command line. Check for Web3 class imports.
 
-	```
 	let web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 	web3.eth.getAccounts().then(console.log); // checking for all accounts
-	```
+	
 // All methods can be used here in the front end.
 // Check for contract creation in the console at chrome.
 
