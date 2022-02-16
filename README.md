@@ -5,9 +5,9 @@ Reference : Web3.js : https://web3js.readthedocs.io/en/v1.7.0/index.html
 
 Install web3 , import web3  and use Web3 class and web3 object in notes and reference how to connect it with ganache using HTTP  : https://web3js.readthedocs.io/en/v1.7.0/web3-eth.html
 
-1.	To install web3 - npm install --save web3
-2. 	To import web3 - let Web3 =require("web3");
-3. 	To connect with Ganache - let web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545")); [Remember that the ganache must be running]
+1.	To install web3 - ``` npm install --save web3 ```
+2. 	To import web3 - ``` let Web3 =require("web3"); ```
+3. 	To connect with Ganache - ``` let web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545")); ``` [Remember that the ganache must be running] 
 
 ## To get balance in ether from particular account: 
 	```
@@ -18,11 +18,11 @@ Install web3 , import web3  and use Web3 class and web3 object in notes and refe
 	```
 ## To transfer eth from one account to another
 
-In Wei:
+1.	In Wei:
 	```
 	web3.eth.sendTransaction({from:"0x745985A826FbDBAF9960EEC52e13a5a6ca0D9132" , to: "0xb7acbe1FF9B0cdAAA2F3e5Df5fE43ACDE89A500e", value: 5000000000000000000});
 	```
-In ether: 
+2. 	In ether: 
 	```
 	web3.eth.sendTransaction({
 	from:"0xD8DAbc2F36B4c1EA1CFFBE0EAd5b236A6Df1c0e9" , 
