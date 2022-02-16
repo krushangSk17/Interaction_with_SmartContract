@@ -32,15 +32,17 @@ value: web3.utils.toWei("5","ether")});
 # Smart contract deployment and Code for Accessing the contract using webJS:
 
 1. create smart contract : 
-
-//SPDX-License-Identifier: UNLICENSED
-pragma solidity >=0.5.0 < 0.9.0;
-contract demo{
-    uint public x = 10;
-    function set(uint _x) public{
-        x = _x;
-    }
-}
+	
+	```
+	//SPDX-License-Identifier: UNLICENSED
+	pragma solidity >=0.5.0 < 0.9.0;
+	contract demo{
+	    uint public x = 10;
+	    function set(uint _x) public{
+		x = _x;
+	    }
+	}
+	```
 
 Deploy it on a web3 provider and provide http of ganache.
 Check the contract functionality on remix.
