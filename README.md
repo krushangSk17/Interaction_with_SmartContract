@@ -10,25 +10,25 @@ Install web3 , import web3  and use Web3 class and web3 object in notes and refe
 3. 	To connect with Ganache - let web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545")); [Remember that the ganache must be running]
 
 ## To get balance in ether from particular account: 
-
-web3.eth.getBalance("0xD8DAbc2F36B4c1EA1CFFBE0EAd5b236A6Df1c0e9").then(function(result){
-console.log(web3.utils.fromWei(result,'ether'));
-}
-);
-
+	```
+	web3.eth.getBalance("0xD8DAbc2F36B4c1EA1CFFBE0EAd5b236A6Df1c0e9").then(function(result){
+	console.log(web3.utils.fromWei(result,'ether'));
+	}
+	);
+	```
 ## To transfer eth from one account to another
 
 In Wei:
-
-web3.eth.sendTransaction({from:"0x745985A826FbDBAF9960EEC52e13a5a6ca0D9132" , to: "0xb7acbe1FF9B0cdAAA2F3e5Df5fE43ACDE89A500e", value: 5000000000000000000});
-
+	```
+	web3.eth.sendTransaction({from:"0x745985A826FbDBAF9960EEC52e13a5a6ca0D9132" , to: "0xb7acbe1FF9B0cdAAA2F3e5Df5fE43ACDE89A500e", value: 5000000000000000000});
+	```
 In ether: 
-
-web3.eth.sendTransaction({
-from:"0xD8DAbc2F36B4c1EA1CFFBE0EAd5b236A6Df1c0e9" , 
-to: "0xb7acbe1FF9B0cdAAA2F3e5Df5fE43ACDE89A500e", 
-value: web3.utils.toWei("5","ether")});
-
+	```
+	web3.eth.sendTransaction({
+	from:"0xD8DAbc2F36B4c1EA1CFFBE0EAd5b236A6Df1c0e9" , 
+	to: "0xb7acbe1FF9B0cdAAA2F3e5Df5fE43ACDE89A500e", 
+	value: web3.utils.toWei("5","ether")});
+	```
 ## Smart contract deployment and Code for Accessing the contract using webJS:
 
 1. create smart contract : 
@@ -53,9 +53,8 @@ Open command line and write this command for,
 ### First create contract variable:
 	```
 	let contract = new web3.eth.Contract(ABI, address);
-
-	ABI = found on deploy part in remix, Address = compile part in remix.
 	```
+ABI = found on deploy part in remix, Address = compile part in remix.
 
 # Method accessing using node commands : 
 1. 	Check variable value using command.
@@ -77,18 +76,18 @@ Open command line and write this command for,
 	```
 	npm install web3.js-browser
 	```
-	// Create an html file and add this into the head section.
+// Create an html file and add this into the head section.
 	```
 	<script src="node_modules/web3.js-browser/build/web3.js"></script>
 	```
-	// Check into the chrome command line. Check for Web3 class imports.
+// Check into the chrome command line. Check for Web3 class imports.
 
 	```
 	let web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 	web3.eth.getAccounts().then(console.log); // checking for all accounts
 	```
-	// All methods can be used here in the front end.
-  	// Check for contract creation in the console at chrome.
+// All methods can be used here in the front end.
+// Check for contract creation in the console at chrome.
 
 
 ## Compile And generate ABI and BYTE code for Smart contract. And Deployment of Smart contract using Web3.js
@@ -173,7 +172,7 @@ Open command line and write this command for,
 
 1. 	npm install solc fs web3
 2. 	node web_new.js
-    One can see bytecode and abi in output.
+   	One can see bytecode and abi in output.
 
 
 
