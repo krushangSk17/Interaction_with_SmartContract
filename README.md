@@ -44,17 +44,17 @@ Install web3 , import web3  and use Web3 class and web3 object in notes and refe
 	}
 	```
 
-Deploy it on a web3 provider and provide http of ganache.
-Check the contract functionality on remix.
+-	Deploy it on a web3 provider and provide http of ganache.
+-	Check the contract functionality on remix.
 	
-Install and connect web3. Ignore if already done in the previous part.
-Open command line and write this command for,
+-	Install and connect web3. Ignore if already done in the previous part.
+-	Open command line and write this command for,
 	
 ### First create contract variable:
 	
 	let contract = new web3.eth.Contract(ABI, address);
 
-ABI = found on deploy part in remix, Address = compile part in remix.
+-	ABI = found on deploy part in remix, Address = compile part in remix.
 
 # Method accessing using node commands : 
 1. 	Check variable value using command.
